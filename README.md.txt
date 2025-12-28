@@ -8,7 +8,7 @@ This project decouples the **User-Facing API** (Producer) from the **Background 
 
 ## 🏗 System Architecture
 
-The system consists of two separate Spring Boot applications communicating asynchronously via a Message Broker.
+The system consists of two separate Spring Boot applications communicating asynchronously via a Message Broker. aND THIS IS FOR THE PR PURPOSE ONLY.
 
 ```mermaid
 graph LR
