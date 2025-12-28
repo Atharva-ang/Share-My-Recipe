@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  # The "Post Office"
+  rabbitmq:
+    image: rabbitmq:3.13-management
+    container_name: recipe-rabbitmq
+    ports:
+      - "5672:5672"   # The port our Java apps use to send mail
+      - "15672:15672" # The Dashboard port (open this in your browser!)
+    healthcheck:
+      test: ["CMD", "rabbitmq-diagnostics", "check_running"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
